@@ -1,2 +1,2 @@
-pip install pipenv
-pipenv --python 3
+pip install virtualenv
+virtualenv env
