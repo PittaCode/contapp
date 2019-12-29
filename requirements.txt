@@ -1,1 +1,4 @@
 Flask
+flask-sqlalchemy
+python-dotenv
+autopep8
