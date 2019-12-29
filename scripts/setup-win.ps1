@@ -1,2 +1,3 @@
 pip install virtualenv
-virtualenv env
+python -m virtualenv venv
+.\venv\Scripts\activate.bat
