@@ -1,4 +1,5 @@
-Flask
-flask-sqlalchemy
-python-dotenv
 autopep8
+pylint
+Flask
+python-dotenv
+flask-sqlalchemy
