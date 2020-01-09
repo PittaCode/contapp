@@ -1,8 +1,13 @@
+import os
 from flask import Flask
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/hello')
+@application.route('/hello')
 def hello():
     return 'Hello Eleni'
+
+
+if __name__ == "__main__":
+    application.run()
