@@ -8,18 +8,11 @@ application = Flask(__name__)
 @application.route('/query')
 def hello():
     if request.args:
-
-        # We have our query string nicely serialized as a Python dictionary
         args = request.args
-
-        # We'll create a string to display the parameters & values (???)
-        serialized = ", ".join(f"{k}: {v}" for k, v in request.args.items())
-
-        # Display the query string to the client in a different format
-        return f"Hello {serialized}", 200
-
+        user = args['username']
+        return f"Hello {user}", 200
+   
     else:
-
         return "No query string received", 200
 
 
