@@ -4,10 +4,11 @@ from flask import request
 
 application = Flask(__name__)
 
-@app.route('/query')
+
+@application.route('/query')
 def hello():
     if request.args:
-    
+
         # We have our query string nicely serialized as a Python dictionary
         args = request.args
 
@@ -19,4 +20,8 @@ def hello():
 
     else:
 
-        return "No query string received", 200 
+        return "No query string received", 200
+
+
+if __name__ == "__main__":
+    application.run()
