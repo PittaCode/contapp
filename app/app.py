@@ -1,8 +1,8 @@
+import os
 from flask import Flask
 from flask import request
 
-app = Flask(__name__)
-
+application = Flask(__name__)
 
 @app.route('/query')
 def hello():
