@@ -1,3 +1,3 @@
-FLASK_APP=app/app.py
+FLASK_APP=contapp.py
 FLASK_DEBUG=true
 FLASK_ENV=development
