@@ -3,3 +3,5 @@ pylint
 Flask
 python-dotenv
 flask-sqlalchemy
+flask-migrate
+pylint-flask-sqlalchemy

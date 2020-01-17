@@ -11,6 +11,8 @@ pylint = "*"
 flask = "*"
 flask-sqlalchemy = "*"
 python-dotenv = "*"
+flask-migrate = "*"
+pylint-flask-sqlalchemy = "*"
 
 [requires]
 python_version = "3.7"
