@@ -2,7 +2,7 @@ from app import application
 from flask import request
 
 
-@application.route('/query')
+@application.route('/hello')
 def hello():
     if request.args:
 
@@ -18,6 +18,18 @@ def hello():
     else:
 
         return "No query string received", 200
+
+
+@application.route('/test-post', methods=['POST'])
+def test_post():
+    print(request)
+    print(request.form)
+    print(request.get_json())
+
+    if request.get_json():
+        return request.get_json(), 200
+    else:
+        return request.form, 200
 
 
 if __name__ == "__main__":
