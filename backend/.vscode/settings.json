@@ -1,0 +1,6 @@
+{
+  "python.pythonPath": "/Users/andreas/.local/share/virtualenvs/backend-5B2VgBMO/bin/python",
+  "editor.tabSize": 4,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true
+}
