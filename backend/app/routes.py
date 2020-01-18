@@ -2,6 +2,11 @@ from app import application
 from flask import request
 
 
+@application.route('/')
+def index():
+    return flask.render_template('index.html')
+
+
 @application.route('/hello')
 def hello():
     if request.args:
