@@ -1,10 +1,11 @@
 from app import application
 from flask import request
+from flask import render_template
 
 
 @application.route('/')
 def index():
-    return flask.render_template('index.html')
+    return render_template('index.html', token='contapp-token')
 
 
 @application.route('/hello')
