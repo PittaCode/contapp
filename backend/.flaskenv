@@ -1,3 +1,0 @@
-FLASK_APP=contapp.py
-FLASK_DEBUG=true
-FLASK_ENV=development
