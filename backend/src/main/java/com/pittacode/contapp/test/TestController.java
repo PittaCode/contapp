@@ -1,6 +1,5 @@
 package com.pittacode.contapp.test;
 
-import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +8,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 @RequestMapping(path = "/test")
-public class TestController implements BeanPostProcessor {
+public class TestController {
 
 
     @RequestMapping(path = "/ping", method = GET)
