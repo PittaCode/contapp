@@ -7,6 +7,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import isEmail from 'sane-email-validation';
 import Subtitle from '../Headings/Subtitle';
 
+import './Register.css';
+
 function Register() {
   const { handleSubmit, register, errors, formState } = useForm({
     mode: 'onBlur',
@@ -20,7 +22,6 @@ function Register() {
 
   const isEmailValid = (value) =>
     isEmail(value) || 'Provide a valid email address';
-  console.log(errors);
 
   return (
     <Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -30,7 +31,7 @@ function Register() {
             <Subtitle text="Account Info" />
           </Form.Group>
 
-          <Form.Group controlId="email">
+          <Form.Group className="form-input-group" controlId="email">
             <Form.Control
               name="email"
               type="email"
@@ -48,7 +49,7 @@ function Register() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group controlId="alias">
+          <Form.Group className="form-input-group" controlId="alias">
             <InputGroup>
               <InputGroup.Prepend>
                 <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
@@ -74,7 +75,7 @@ function Register() {
             </InputGroup>
           </Form.Group>
 
-          <Form.Group controlId="password">
+          <Form.Group className="form-input-group" controlId="password">
             <Form.Control
               name="password"
               type="password"
@@ -105,7 +106,7 @@ function Register() {
             <Subtitle text="Personal Info" />
           </Form.Group>
 
-          <Form.Group controlId="name">
+          <Form.Group className="form-input-group" controlId="name">
             <Form.Control
               name="name"
               type="text"
@@ -124,8 +125,9 @@ function Register() {
                 },
                 pattern: {
                   value: /^[A-z-]{1,40}$/,
-                  message: 'The only characters allowed are: letters and hyphens'
-                }
+                  message:
+                    'The only characters allowed are: letters and hyphens',
+                },
               })}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -134,7 +136,7 @@ function Register() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group controlId="middleName">
+          <Form.Group className="form-input-group" controlId="middleName">
             <Form.Control
               name="middleName"
               type="text"
@@ -153,8 +155,9 @@ function Register() {
                 },
                 pattern: {
                   value: /^[A-z .-]{1,40}$/,
-                  message: 'The only characters allowed are: letters spaces, dots and hyphens'
-                }
+                  message:
+                    'The only characters allowed are: letters spaces, dots and hyphens',
+                },
               })}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -163,7 +166,7 @@ function Register() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group controlId="familyName">
+          <Form.Group className="form-input-group" controlId="familyName">
             <Form.Control
               name="familyName"
               type="text"
@@ -178,12 +181,13 @@ function Register() {
                 },
                 maxLength: {
                   value: 40,
-                  message: 'The max length allowed is 40'
+                  message: 'The max length allowed is 40',
                 },
                 pattern: {
                   value: /^[A-z-]{1,40}$/,
-                  message: 'The only characters allowed are: letters and hyphens'
-                }
+                  message:
+                    'The only characters allowed are: letters and hyphens',
+                },
               })}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
