@@ -13,7 +13,7 @@ function Register() {
   const { handleSubmit, register, errors, formState } = useForm({
     mode: 'onBlur',
   });
-  const { touched } = formState;
+  const { touched, isValid } = formState;
 
   const onSubmit = (data, e) => {
     console.log('Submit event', e);
@@ -198,7 +198,7 @@ function Register() {
         </Form.Group>
       </Form.Row>
 
-      <Button variant="primary" type="submit">
+      <Button variant="primary" size="lg" type="submit" disabled={!isValid}>
         Register
       </Button>
     </Form>
