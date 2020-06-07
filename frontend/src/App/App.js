@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import SuperTitle from '../Headings/SuperTitle';
+import Register from '../Register/Register';
+import {wrapWithPageLayout, wrapWithNarrowPageLayout} from '../Layout/layouts';
 import './App.css';
 
 const REGISTER = 'REGISTER';
@@ -10,7 +13,7 @@ function App() {
 
   let screenHtml;
   if (screen === REGISTER) {
-    screenHtml = <div>REGISTER</div>;
+    screenHtml = wrapWithNarrowPageLayout(REGISTER, <Register />);
   }
   if (screen === GET_INFO) {
     screenHtml = <div>GET_INFO</div>;
@@ -22,7 +25,7 @@ function App() {
   return (
     <div className="contapp">
       <header className="contapp-header">
-        <div>Contapp Bare Bones Sandbox</div>
+        <SuperTitle text="Contapp Sandbox" />
         <div className="features">
           <button className="link" onClick={() => setScreen(REGISTER)}>
             Register
@@ -35,7 +38,7 @@ function App() {
           </button>
         </div>
       </header>
-      <div className="mock-page">{screenHtml}</div>
+      <div>{screenHtml}</div>
     </div>
   );
 }
