@@ -4,9 +4,9 @@ import Register from '../Register/Register';
 import {wrapWithPageLayout, wrapWithNarrowPageLayout} from '../Layout/layouts';
 import './App.css';
 
-const REGISTER = 'REGISTER';
-const GET_INFO = 'GET_INFO';
-const EDIT_INFO = 'EDIT_INFO';
+const REGISTER = 'Registration';
+const GET_INFO = 'Retrieve information';
+const EDIT_INFO = 'Edit information';
 
 function App() {
   const [screen, setScreen] = useState(null);
