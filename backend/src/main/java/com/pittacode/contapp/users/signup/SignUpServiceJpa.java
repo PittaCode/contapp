@@ -1,14 +1,14 @@
 package com.pittacode.contapp.users.signup;
 
-import com.pittacode.contapp.persistence.models.User;
-import com.pittacode.contapp.persistence.repositories.UserRepository;
+import com.pittacode.contapp.persistence.users.User;
+import com.pittacode.contapp.persistence.users.UserRepository;
 import com.pittacode.contapp.users.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Profile({"jpa"})
+@Profile("jpa")
 public class SignUpServiceJpa implements SignUpService {
 
     private final UserRepository userRepository;

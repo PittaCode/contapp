@@ -1,6 +1,5 @@
-package com.pittacode.contapp.persistence.repositories;
+package com.pittacode.contapp.persistence.users;
 
-import com.pittacode.contapp.persistence.models.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

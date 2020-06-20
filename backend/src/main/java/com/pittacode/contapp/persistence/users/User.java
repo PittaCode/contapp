@@ -1,4 +1,4 @@
-package com.pittacode.contapp.persistence.models;
+package com.pittacode.contapp.persistence.users;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
