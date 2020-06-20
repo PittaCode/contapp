@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="contapp">
-      <header className="contapp-header">
+      <header className="contapp-menu">
         <SuperTitle text="Contapp Sandbox" />
         <div className="features">
           <button className="link" onClick={() => setScreen(REGISTER)}>
@@ -38,7 +38,8 @@ function App() {
           </button>
         </div>
       </header>
-      <div>{screenHtml}</div>
+
+      <div className="contapp-main">{screenHtml}</div>
     </div>
   );
 }
