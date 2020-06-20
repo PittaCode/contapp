@@ -11,7 +11,7 @@ import java.util.Map;
 import static java.util.Collections.max;
 
 @Service
-@Profile({"default", "map"})
+@Profile("data-map")
 public class SignUpServiceMap implements SignUpService {
 
     private final Map<Long, User> userRepository;

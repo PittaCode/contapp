@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Profile("jpa")
+@Profile("data-jpa")
 public class SignUpServiceJpa implements SignUpService {
 
     private final UserRepository userRepository;
