@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 import isEmail from 'sane-email-validation';
 import Subtitle from '../Headings/Subtitle';
+import { signUp } from '../communication/contapp/service';
 
 import './Register.css';
 
@@ -15,9 +16,9 @@ function Register() {
   });
   const { touched, isValid } = formState;
 
-  const onSubmit = (data, e) => {
-    console.log('Submit event', e);
-    alert(JSON.stringify(data));
+  const onSubmit = async (data, e) => {
+    const response = await signUp(data);
+    alert(response);
   };
 
   const isEmailValid = (value) =>
@@ -136,13 +137,13 @@ function Register() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group className="form-input-group" controlId="middleName">
+          <Form.Group className="form-input-group" controlId="middleNames">
             <Form.Control
-              name="middleName"
+              name="middleNames"
               type="text"
               placeholder="Middle Name(s)"
-              isValid={touched.middleName && !errors.middleName}
-              isInvalid={!!errors.middleName}
+              isValid={touched.middleNames && !errors.middleNames}
+              isInvalid={!!errors.middleNames}
               ref={register({
                 required: false,
                 minLength: {
@@ -162,7 +163,7 @@ function Register() {
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
-              {errors?.middleName?.message}
+              {errors?.middleNames?.message}
             </Form.Control.Feedback>
           </Form.Group>
 
