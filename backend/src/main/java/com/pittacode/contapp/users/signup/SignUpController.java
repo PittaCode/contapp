@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api", consumes = MediaType.APPLICATION_JSON_VALUE)
 public class SignUpController {
 
     static final String PATH = "/sign-up";
